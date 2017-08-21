@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.String?>
+<AnchorPane prefHeight="628.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Orden">
+   <children>
+      <Label layoutX="166.0" layoutY="14.0" text="PIZZA PTY" textFill="#26089e">
+         <font>
+            <Font name="System Bold Italic" size="46.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="94.0" text="Detalle de la orden">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="bt_inicio" layoutX="20.0" layoutY="555.0" mnemonicParsing="false" onAction="#eventoOrden" style="-fx-background-radius: 50; -fx-background-color: white;">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="47.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/home.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <GridPane hgap="10.0" layoutX="20.0" layoutY="162.0" prefHeight="92.0" prefWidth="570.0" vgap="15.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.0" minWidth="10.0" prefWidth="110.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="348.0" minWidth="10.0" prefWidth="128.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="421.0" minWidth="10.0" prefWidth="312.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label contentDisplay="CENTER" prefHeight="25.0" prefWidth="111.0" text="Cantidad" textAlignment="CENTER" underline="true" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" prefHeight="15.0" prefWidth="97.0" text="Tamaño" textAlignment="CENTER" underline="true" wrapText="true" GridPane.columnIndex="1">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tx_cantidad" onAction="#eventoOrden" prefHeight="45.0" prefWidth="69.0" promptText="#Cant." text="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font></TextField>
+            <ComboBox fx:id="cmb_tam" prefHeight="35.0" prefWidth="130.0" promptText="Sel. tamaño" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="Pequeña" />
+                     <String fx:value="Mediana" />
+                     <String fx:value="Grande" />
+                     <String fx:value="Familiar" />
+                  </FXCollections>
+               </items>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ComboBox>
+            <Label contentDisplay="CENTER" prefHeight="15.0" prefWidth="97.0" text="Nombre" textAlignment="CENTER" underline="true" wrapText="true" GridPane.columnIndex="2">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label id="tx_nom_pizza" fx:id="tx_nom_pizza" prefHeight="28.0" prefWidth="339.0" text="pizza seleccionada" textAlignment="CENTER" textFill="#610303bf" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <Button fx:id="bt_confirma_orden" layoutX="182.0" layoutY="304.0" mnemonicParsing="false" onAction="#eventoOrden" prefHeight="45.0" prefWidth="191.0" style="-fx-background-color: black; -fx-background-radius: 70;" text="Confirmar orden" textFill="#05e42a">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Pane fx:id="p_pago" layoutX="20.0" layoutY="358.0" prefHeight="205.0" prefWidth="560.0" visible="false">
+         <children>
+            <Label layoutY="7.0" text="Detalle de facturación">
+               <font>
+                  <Font name="System Bold Italic" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="112.0" layoutY="140.0" text="!Gracias por tu compra!">
+               <font>
+                  <Font name="System Bold Italic" size="25.0" />
+               </font>
+            </Label>
+            <HBox layoutX="85.0" layoutY="65.0" prefHeight="75.0" prefWidth="391.0">
+               <children>
+                  <Label prefHeight="54.0" prefWidth="227.0" text="Total a pagar:" textFill="RED" underline="true" wrapText="true">
+                     <font>
+                        <Font name="System Italic" size="30.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tx_total_pagar" disable="true" editable="false" prefHeight="55.0" prefWidth="120.0" promptText="Cantidad" text="\$100">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Label fx:id="tx_estado" alignment="CENTER" layoutX="40.0" layoutY="270.0" prefHeight="15.0" prefWidth="475.0" text="** estado" textFill="RED" visible="false" wrapText="true" />
+   </children>
+   <opaqueInsets>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </opaqueInsets>
+</AnchorPane>

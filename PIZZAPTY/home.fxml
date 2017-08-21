@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="615.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <VBox alignment="CENTER" layoutX="19.0" layoutY="7.0" prefHeight="604.0" prefWidth="580.0">
+         <children>
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="61.0" prefWidth="551.0" text="PIZZA PTY" textAlignment="CENTER" textFill="#26089ea6">
+               <font>
+                  <Font name="System Bold Italic" size="46.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Label>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="520.0" prefViewportHeight="380.0" prefViewportWidth="555.0" prefWidth="580.0">
+               <content>
+                  <GridPane alignment="CENTER" prefHeight="482.0" prefWidth="555.0" style="-fx-background-color: white;" vgap="10.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="408.0" minWidth="10.0" prefWidth="389.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="341.0" minWidth="10.0" prefWidth="166.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="148.0" minHeight="120.0" prefHeight="120.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="214.0" minHeight="120.0" prefHeight="120.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="246.0" minHeight="120.0" prefHeight="120.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="246.0" minHeight="120.0" prefHeight="222.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="246.0" minHeight="120.0" prefHeight="222.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="246.0" minHeight="120.0" prefHeight="222.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="127.0" prefWidth="308.0" spacing="10.0" GridPane.rowIndex="2">
+                           <children>
+                              <Label fx:id="tx_orden3" alignment="TOP_LEFT" prefHeight="25.0" prefWidth="214.0" text="Pizza Meat Lover's">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="35.0" prefWidth="354.0" text="Pepperoni, salchicha italiana, jamón, tocino, carne de cerdo sazonada y carne de res." wrapText="true" />
+                              <Button fx:id="bt_orden3" alignment="CENTER" mnemonicParsing="false" onAction="#evento" style="-fx-background-radius: 100;" text="Ordenar" textFill="RED">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="127.0" prefWidth="308.0" spacing="10.0" GridPane.rowIndex="1">
+                           <children>
+                              <Label fx:id="tx_orden2" alignment="TOP_LEFT" prefHeight="25.0" prefWidth="237.0" text="Pizza De Pepperoni">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="15.0" prefWidth="372.0" text="Queso mozzarella y pepperoni." />
+                              <Button fx:id="bt_orden2" alignment="CENTER" mnemonicParsing="false" onAction="#evento" style="-fx-background-radius: 100;" text="Ordenar" textFill="RED">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                         <ImageView fitHeight="94.0" fitWidth="154.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                             <image>
+                                 <Image url="@img/cheese.png" />
+                             </image>
+                         </ImageView>
+                        <ImageView fitHeight="130.0" fitWidth="199.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <image>
+                              <Image url="@img/pepperoni.png" />
+                           </image>
+                        </ImageView>
+                        <VBox alignment="TOP_CENTER" prefHeight="127.0" prefWidth="308.0" spacing="10.0" GridPane.rowIndex="3">
+                           <children>
+                              <Label fx:id="tx_orden4" alignment="TOP_LEFT" prefHeight="25.0" prefWidth="179.0" text="Pizza Supreme">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="39.0" prefWidth="374.0" text="Pepperoni, carne de cerdo sazonada, carne de res, hongos, pimentones verdes y cebolla morada." wrapText="true" />
+                              <Button fx:id="bt_orden4" alignment="CENTER" mnemonicParsing="false" onAction="#evento" style="-fx-background-radius: 100;" text="Ordenar" textFill="RED">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="127.0" prefWidth="308.0" spacing="10.0">
+                           <children>
+                              <Label fx:id="tx_orden1" alignment="TOP_LEFT" prefHeight="25.0" prefWidth="179.0" text="Pizza De Queso">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="15.0" prefWidth="373.0" text="Salsa marinara clásica con queso mozzarella." />
+                              <Button fx:id="bt_orden1" alignment="CENTER" mnemonicParsing="false" onAction="#evento" style="-fx-background-radius: 100;" text="Ordenar" textFill="RED">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <ImageView fitHeight="130.0" fitWidth="199.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <image>
+                              <Image url="@img/love.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="130.0" fitWidth="199.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <image>
+                              <Image url="@img/supreme.png" />
+                           </image>
+                        </ImageView>
+                        <VBox alignment="TOP_CENTER" prefHeight="127.0" prefWidth="308.0" spacing="10.0" GridPane.rowIndex="4">
+                           <children>
+                              <Label fx:id="tx_orden5" alignment="TOP_LEFT" prefHeight="25.0" prefWidth="237.0" text="Pizza Primo Meats">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="38.0" prefWidth="372.0" text="Salsa de tomate premium con salami, pepperoni, salchicha italiana y carne de cerdo sazonada." wrapText="true" />
+                              <Button fx:id="bt_orden5" alignment="CENTER" mnemonicParsing="false" onAction="#evento" style="-fx-background-radius: 100;" text="Ordenar" textFill="RED">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <ImageView fitHeight="130.0" fitWidth="199.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <image>
+                              <Image url="@img/primo.png" />
+                           </image>
+                        </ImageView>
+                        <VBox alignment="TOP_CENTER" prefHeight="127.0" prefWidth="308.0" spacing="10.0" GridPane.rowIndex="5">
+                           <children>
+                              <Label fx:id="tx_orden6" alignment="TOP_LEFT" prefHeight="25.0" prefWidth="272.0" text="Pizza Hawaiian Chicken">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="15.0" prefWidth="372.0" text="Pollo a la plancha, jamón, piña y pimientos verdes." />
+                              <Button fx:id="bt_orden6" alignment="CENTER" mnemonicParsing="false" onAction="#evento" style="-fx-background-radius: 100;" text="Ordenar" textFill="RED">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <ImageView fitHeight="130.0" fitWidth="199.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <image>
+                              <Image url="@img/hawaiian.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+         </children>
+         <opaqueInsets>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </opaqueInsets>
+      </VBox>
+      <Label layoutX="13.0" layoutY="618.0" prefHeight="35.0" prefWidth="590.0" style="-fx-background-color: white;" text="Desarrollado en curso de programación 2" textAlignment="CENTER" textFill="#15f824" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
